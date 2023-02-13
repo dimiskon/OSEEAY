@@ -1,2 +1,0 @@
-# OSSEAY
-OSSEAY 
