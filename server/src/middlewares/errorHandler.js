@@ -1,7 +1,7 @@
 'use strict';
 
 const errorHandler = (err, req, res, next) => {
-  console.log('An ERROR found!!!');
+  console.error('An ERROR occured!!!');
   const errStatus = err.statusCode || 500;
   const errMsg = err.message || 'Something went wrong!';
   res.status(errStatus).json({

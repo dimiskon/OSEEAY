@@ -8,6 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const staffsRouter = require('./routes/staffs');
+const buildingsRouter = require('./routes/buildings');
 
 // Middlewares
 const dbConnector = require('./middlewares/dbConnector');
@@ -37,6 +38,7 @@ const startServer = async() => {
 
     // Routers
     app.use('/staffs', staffsRouter);
+    app.use('/buildings', buildingsRouter);
 
     // Middlewares - After
     app.use(filterOutResponse);

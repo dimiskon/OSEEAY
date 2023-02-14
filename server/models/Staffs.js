@@ -84,18 +84,18 @@ module.exports = (sequelize, Sequelize) => {
       foreignKey: { name: 'asma', allowNull: false }
     });
 
-    // staffs <-1------------*-> houses_requests
-    staffs.hasMany(models.houses_requests, {
+    // staffs <-1------------*-> buildings_requests
+    staffs.hasMany(models.buildings_requests, {
       foreignKey: { name: 'asma', allowNull: false }
     });
 
-    // staffs <-1------------1-> houses
-    staffs.hasOne(models.houses, {
-      foreignKey: { name: 'asma', allowNull: false }
+    // staffs <-1------------1-> buildings
+    staffs.hasOne(models.buildings, {
+      foreignKey: { name: 'asma', allowNull: true, defaultValue: null }
     });
 
-    // staffs <-1------------*-> houses_rent_history
-    staffs.hasMany(models.houses_rent_history, {
+    // staffs <-1------------*-> buildings_rent_history
+    staffs.hasMany(models.buildings_rent_history, {
       foreignKey: { name: 'asma', allowNull: false }
     });
 

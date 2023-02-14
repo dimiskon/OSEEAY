@@ -17,7 +17,7 @@ module.exports = async(req, res, next) => {
     payload.asma = asma;
 
     // Create Staff
-    const staffRes = await staffs.create(body);
+    const staffRes = await staffs.create(payload);
 
     res.response_schema = createStaffResponseSchema;
     res.response_body = staffRes;

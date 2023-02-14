@@ -5,8 +5,8 @@ const date = moment.utc().format('YYYY-MM-DD hh:mm:ss');
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('houses_requests', {
-      house_request_id: {
+    await queryInterface.createTable('buildings_requests', {
+      building_request_id: {
         type: Sequelize.INTEGER,
         defaultValue: Sequelize.INTEGER,
         allowNull: false,
@@ -41,6 +41,6 @@ module.exports = {
   },
 
   async down (queryInterface) {
-    await queryInterface.dropTable('houses_requests');
+    await queryInterface.dropTable('buildings_requests');
   }
 };

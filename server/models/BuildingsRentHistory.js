@@ -4,8 +4,8 @@ const moment = require('moment');
 const date = moment.utc().format('YYYY-MM-DD hh:mm:ss');
 
 module.exports = (sequelize, Sequelize) => {
-  const houses_rent_history = sequelize.define('houses_rent_history', {
-    house_rent_history_id: {
+  const buildings_rent_history = sequelize.define('buildings_rent_history', {
+    building_rent_history_id: {
       type: Sequelize.INTEGER,
       defaultValue: Sequelize.INTEGER,
       allowNull: false,
@@ -35,17 +35,17 @@ module.exports = (sequelize, Sequelize) => {
     freezeTableName: true
   });
 
-  houses_rent_history.associate = function(models) {
-    // houses_rent_history <-1------------*-> staffs
-    houses_rent_history.belongsTo(models.staffs, {
+  buildings_rent_history.associate = function(models) {
+    // buildings_rent_history <-1------------*-> staffs
+    buildings_rent_history.belongsTo(models.staffs, {
       foreignKey: { name: 'asma', allowNull: false }
     });
 
-    // houses_rent_history <-1------------*-> houses
-    houses_rent_history.hasMany(models.houses, {
-      foreignKey: { name: 'house_id', allowNull: false }
+    // buildings_rent_history <-1------------*-> buildings
+    buildings_rent_history.hasMany(models.buildings, {
+      foreignKey: { name: 'building_id', allowNull: false }
     });
   };
 
-  return houses_rent_history;
+  return buildings_rent_history;
 };

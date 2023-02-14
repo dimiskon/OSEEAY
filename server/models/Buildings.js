@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = (sequelize, Sequelize) => {
-  const houses = sequelize.define('houses', {
-    house_id: {
+  const buildings = sequelize.define('buildings', {
+    building_id: {
       type: Sequelize.INTEGER,
-      defaultValue: Sequelize.INTEGER,
+      defaultValue: 0,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
@@ -39,17 +39,17 @@ module.exports = (sequelize, Sequelize) => {
     deletedAt: 'deleted_at',
   });
 
-  houses.associate = function(models) {
-    // houses <-1------------1-> staffs
-    houses.belongsTo(models.staffs, {
-      foreignKey: { name: 'asma', allowNull: false }
+  buildings.associate = function(models) {
+    // buildings <-1------------1-> staffs
+    buildings.belongsTo(models.staffs, {
+      foreignKey: { name: 'asma', allowNull: true, defaultValue: null }
     });
 
-    // houses <-1------------*-> houses_rent_history
-    houses.hasMany(models.houses_rent_history, {
-      foreignKey: { name: 'house_id', allowNull: false }
+    // buildings <-1------------*-> buildings_rent_history
+    buildings.hasMany(models.buildings_rent_history, {
+      foreignKey: { name: 'building_id', allowNull: false }
     });
   };
 
-  return houses;
+  return buildings;
 };

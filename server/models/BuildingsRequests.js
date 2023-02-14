@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = (sequelize, Sequelize) => {
-  const houses_requests = sequelize.define('houses_requests', {
-    house_request_id: {
+  const buildings_requests = sequelize.define('buildings_requests', {
+    building_request_id: {
       type: Sequelize.INTEGER,
       defaultValue: Sequelize.INTEGER,
       allowNull: false,
@@ -22,17 +22,17 @@ module.exports = (sequelize, Sequelize) => {
     freezeTableName: true
   });
 
-  houses_requests.associate = function(models) {
-    // houses_requests <-*------------1-> staffs
-    houses_requests.belongsTo(models.staffs, {
+  buildings_requests.associate = function(models) {
+    // buildings_requests <-*------------1-> staffs
+    buildings_requests.belongsTo(models.staffs, {
       foreignKey: { name: 'asma', allowNull: false }
     });
 
-    // houses_requests <-1------------1-> refusals
-    houses_requests.hasOne(models.refusals, {
-      foreignKey: { name: 'house_request_id', allowNull: true }
+    // buildings_requests <-1------------1-> refusals
+    buildings_requests.hasOne(models.refusals, {
+      foreignKey: { name: 'building_request_id', allowNull: true }
     });
   };
 
-  return houses_requests;
+  return buildings_requests;
 };
