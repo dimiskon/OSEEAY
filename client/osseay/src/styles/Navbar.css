@@ -9,12 +9,12 @@
 .navbar .mid_side {
   flex: 50%;
   height: 100%;
+  padding: auto;
   display: flex;
   align-items: center;
-  padding-right: 120px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 42px;
+  font-size: 2.5vw;
 }
 
 
@@ -79,10 +79,16 @@
   width: 70px;
   margin: 5px;
 }
+
 @media only screen and (max-width: 900px) {
   .navbar .right_side a {
     width: 70px;
   }
+  
+  .navbar .mid_side {
+    font-size:medium;
+  }
+
   .navbar .left_side {
     padding-left: 50px;
   }
@@ -93,13 +99,18 @@
     display: none;
   }
 
-  .navbar .right_side {
-    justify-content: flex-end;
+  .navbar .mid_side {
+    font-size: medium;
     padding-right: 50px;
   }
 
+  .navbar .right_side {
+    justify-content: flex-end;
+    padding-right: 40px;
+  }
+
   .navbar .right_side button {
-    display: inherit;
+    display:  contents;
   }
 }
 
