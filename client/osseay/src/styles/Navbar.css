@@ -139,7 +139,7 @@
   }
 
   .navbar .rightSide button {
-    display: contents;
+    display: inherit;
   }
 }
 

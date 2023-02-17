@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import NavbarLinks from '../utils/NavbarLinks';
 
 import Logo from '../assets/110pm_EMBL-transparent.png';
 import '../styles/Navbar.css';
@@ -12,7 +12,7 @@ const Navbar = () => {
   const toggleNavbar = () => {
     setOpenLinks(!openLinks)
   }
-  
+
   return (
     <div className='navbar'>
       <div className='leftSide' id={openLinks ? 'open' : 'close'}>
@@ -23,17 +23,11 @@ const Navbar = () => {
           <text className='maximText'>“Μαχιμώτατοι οι ισχύοντες”</text>
         </div>
         <div className='hiddenLinks'>
-          <Link to='/'> ΑΡΧΙΚΗ </Link>
-          <Link to='/staffs'> ΠΡΟΣΩΠΙΚΟ </Link>
-          <Link to='/homes'> ΟΙΚΗΜΑΤΑ </Link>
-          <Link to='/requests'> ΑΙΤΗΣΕΙΣ </Link>
+          <NavbarLinks/>
         </div>
       </div>
       <div className='rightSide'>
-        <Link to='/'> ΑΡΧΙΚΗ</Link>
-        <Link to='/staffs'> ΠΡΟΣΩΠΙΚΟ </Link>
-        <Link to='/homes'> ΟΙΚΗΜΑΤΑ </Link>
-        <Link to='/requests'> ΑΙΤΗΣΕΙΣ </Link>
+        <NavbarLinks/>
         <button onClick={toggleNavbar}>
           <ReorderIcon />
         </button>
