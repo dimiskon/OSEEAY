@@ -42,6 +42,7 @@ const Staffs = () => {
                 <td>{staff.surname}</td>
                 <td>{staff.asma}</td>
                 <td>{staff.unit}</td>
+                <td>{staff.rank}</td>
                 <td>{staff.specialization}</td>
                 <td>{staff.display_name}</td>
                 <td>{staff.mobile_phone}</td>

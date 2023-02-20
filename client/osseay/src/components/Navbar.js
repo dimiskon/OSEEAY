@@ -19,8 +19,8 @@ const Navbar = () => {
         <img alt='' src={Logo}></img>
         <div className='texts'>
           <h1 className='polemikiAerText'>ΠΟΛΕΜΙΚΗ ΑΕΡΟΠΟΡΙΑ</h1>
-          <h1 className='osseayText'> 110ΠΜ - ΟΣΣΕΑΥ </h1>   
-          <h1 className='maximText'>“Μαχιμώτατοι οι ισχύοντες”</h1>
+          <h2 className='osseayText'> 110ΠΜ - ΟΣΣΕΑΥ </h2>   
+          <h2 className='maximText'>“Μαχιμώτατοι οι ισχύοντες”</h2>
         </div>
         <div className='hiddenLinks'>
           <NavbarLinks/>
