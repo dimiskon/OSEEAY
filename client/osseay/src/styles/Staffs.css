@@ -1,0 +1,65 @@
+.staffs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid white;
+  text-align: left;
+  padding: 10px;
+  font-size: 1vw;
+}
+
+th {
+  background-color: rgb(100, 143, 229);
+}
+
+td {
+  background-color: lightgray;
+}
+
+form {
+  display: flex;
+  gap: 5px;
+}
+
+form td:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form * {
+  font-size: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  .staffs td,th {
+    font-size: 0.8vw;
+  } 
+}
+
+@media only screen and (max-width: 600px) {  
+  .staffs td,th {
+    font-size: 0.70vw;
+  }  
+}
+
+@media only screen and (max-width: 500px) {  
+  .staffs td,th {
+    font-size: 0.5vw;
+  }  
+}
+
+
+@media only screen and (max-width: 400px) {  
+  .staffs td,th {
+    font-size: 0.4vw;
+  }  
+}

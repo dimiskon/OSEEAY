@@ -18,9 +18,9 @@ const Navbar = () => {
       <div className='leftSide' id={openLinks ? 'open' : 'close'}>
         <img alt='' src={Logo}></img>
         <div className='texts'>
-          <text className='polemikiAerText'>ΠΟΛΕΜΙΚΗ ΑΕΡΟΠΟΡΙΑ</text>
-          <text className='osseayText'> 110ΠΜ - ΟΣΣΕΑΥ </text>   
-          <text className='maximText'>“Μαχιμώτατοι οι ισχύοντες”</text>
+          <h1 className='polemikiAerText'>ΠΟΛΕΜΙΚΗ ΑΕΡΟΠΟΡΙΑ</h1>
+          <h1 className='osseayText'> 110ΠΜ - ΟΣΣΕΑΥ </h1>   
+          <h1 className='maximText'>“Μαχιμώτατοι οι ισχύοντες”</h1>
         </div>
         <div className='hiddenLinks'>
           <NavbarLinks/>

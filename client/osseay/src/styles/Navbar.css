@@ -7,11 +7,11 @@
 }
 
 .navbar .leftSide {
-  flex: 50%;
+  flex: 80%;
   height: 100%;
   display: flex;
   align-items: center;
-  padding-left: 100px;
+  padding-left: 50px;
 }
 
 .navbar .leftSide .texts {
@@ -21,18 +21,22 @@
 }
 
 .navbar .leftSide .polemikiAerText {
-  font-size: 1.7vw;
+  padding: 0px 0px; 
+  font-size: 1.5vw;
   color: white;
 }
 
 .navbar .leftSide .osseayText {
+  padding: 0vh 0vh;
+  
   font-size: 1.2vw;
   display: block;
   color: white;
 }
 
 .navbar .leftSide .maximText {
-  font-size: small;
+  padding: 0vh 0vh;
+  font-size: 0.8vw;
   font-style: italic;
   font-weight: lighter;
   display: block;
@@ -115,20 +119,20 @@
   }
 
   .navbar .leftSide .polemikiAerText {
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
   
   .navbar .leftSide .osseayText {
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
 
   .navbar .leftSide .maximText {
-    font-size: 1.5vw;
+    font-size: 1vw;
   }
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .navbar .rightSide a {
     display: none;
   }
@@ -143,7 +147,7 @@
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .navbar .rightSide button {
     display: none;
   }
