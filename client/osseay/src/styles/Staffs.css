@@ -28,9 +28,9 @@ td {
 }
 
 .staffs .searchField {
-  padding: 0vw 3vw 0vw 0vw;
-  display: inline-flex;
-  align-self: end;
+  padding: 0vh 0vw 2vh 0vh;
+  display: flex;
+  align-self: center;
 }
 
 @media only screen and (max-width: 1100px) {

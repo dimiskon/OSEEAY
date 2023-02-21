@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Staff = ({staff, index}) => {
+const Staff = ({ staff, index }) => {
   return (
     <tr>
       <td>{index}</td>

@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import AddStaffButton from '../components/staffs/AddStaffButton.js';
-
 import Staff from '../components/staffs/Staff.js';
 import StaffTableColNames from '../components/staffs/StaffTableColNames.js';
 
-import {TextField} from '@mui/material';
-
+import { TextField } from '@mui/material';
 
 import '../styles/Staffs.css'
+import AddNewStaffButton from '../components/staffs/AddNewStaffButton.js';
 
 const Staffs = () => {
   const [staffs, setStaffs] = useState([]);
@@ -25,7 +23,7 @@ const Staffs = () => {
   return (
     <div className='staffs'>
       <div className='searchField'>
-        <AddStaffButton/>
+        <AddNewStaffButton/>
         <TextField id="outlined-basic" label="Search..." variant="outlined" />
       </div>
       <table>
@@ -33,9 +31,9 @@ const Staffs = () => {
           <StaffTableColNames/>
         </thead>
         <tbody>
-          {staffs.map((staff,index)=> (
-              <Staff key={staff.asma} staff={staff} index={index}/>
-            )  
+          {staffs.map((staff, index) => (
+            <Staff key={staff.asma} staff={staff} index={index}/>
+          )
           )}
         </tbody>
       </table>

@@ -1,0 +1,97 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "react/prop-types": "off",
+    "eqeqeq": "error",
+    "no-console": "warn",
+    "react/display-name": "off",
+    "react/no-children-prop": "off",
+    "react/react-in-jsx-scope": "off",
+    "indent": [
+      "error",
+      2
+    ],
+    "no-multi-spaces": "error",
+    "object-curly-spacing": [
+      "error",
+      "always",
+      {
+        "objectsInObjects": false
+      }
+    ],
+    "space-in-parens": [
+      "error",
+      "never"
+    ],
+    "comma-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "key-spacing": [
+      "error",
+      {
+        "beforeColon": false,
+        "afterColon": true
+      }
+    ],
+    "no-trailing-spaces": "error",
+    "space-before-blocks": "error",
+    "arrow-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "space-infix-ops": "error",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 1
+      }
+    ],
+    "computed-property-spacing": [
+      "error",
+      "never"
+    ],
+    "curly": "error",
+    "brace-style": [
+      "error",
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "block-spacing": "error"
+  },
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  }
+}
