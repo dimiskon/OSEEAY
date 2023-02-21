@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Staff = ({staff}) => {
+const Staff = ({staff, index}) => {
   return (
     <tr>
+      <td>{index}</td>
       <td>{staff.name}</td>
       <td>{staff.surname}</td>
       <td>{staff.asma}</td>

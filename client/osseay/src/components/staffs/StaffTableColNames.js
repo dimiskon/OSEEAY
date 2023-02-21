@@ -3,6 +3,7 @@ import React from 'react'
 const StaffTableColNames = () => {
   return (
     <tr>
+      <th>S/R</th>
       <th>ΟΝΟΜΑ</th>
       <th>ΕΠΩΝΥΜΟ</th>
       <th>ΑΣΜΑ</th>

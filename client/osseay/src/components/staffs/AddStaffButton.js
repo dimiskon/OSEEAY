@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AddBoxIcon from '@mui/icons-material/AddBox';
+import AddButtonIcon from '@mui/icons-material/AddBoxOutlined';
 import { Tooltip } from '@mui/material';
 
 import './AddStaffButton.css';
@@ -13,17 +13,15 @@ const AddStaffButton = () => {
       PopperProps={{
         sx: {
           '& .MuiTooltip-tooltipArrow': {
-            fontSize: '1.3vw',
-            bgcolor: '#03096f',
+            fontSize: '1.2vw',
+            bgcolor: '#000',
             position: 'relative',
-            left: 12,
-            bottom: 5
           }
         }
       }}
-      placement='left' title='Πρόσθεσε Προσωπικό'>
+      placement='top-start' title='Πρόσθεσε Προσωπικό'>
         <button>
-          <AddBoxIcon color='inherit' fontSize='inherit'/>
+          <AddButtonIcon color='inherit' fontSize='inherit'/>
         </button>
       </Tooltip>
     </div>
