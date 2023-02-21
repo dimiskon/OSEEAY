@@ -1,0 +1,15 @@
+.addButton {
+  align-self: center;
+  display: flex;
+}
+
+.addButton button{
+  border: none;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+  font-size: 40px;
+  color: #03096f;
+}

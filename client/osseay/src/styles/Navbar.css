@@ -1,7 +1,7 @@
 .navbar {
   width: 100%;
   height: 100px;
-  background-color: #121619;
+  background-color: #03096f;
   display: flex;
   flex-direction: row;
 }
@@ -17,7 +17,7 @@
 .navbar .leftSide .texts {
   display: block;
   margin: 0.5rem;
-  line-height: 0.6rem;
+  line-height: 0.62rem;
 }
 
 .navbar .leftSide .polemikiAerText {
@@ -28,6 +28,7 @@
 .navbar .leftSide .osseayText {
   font-size: 1.4vw;
   color: white;
+  align-self: center;
 }
 
 .navbar .leftSide .maximText {

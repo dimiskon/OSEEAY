@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import AddBoxIcon from '@mui/icons-material/AddBox';
+
+import AddStaffButton from '../components/staffs/AddStaffButton.js';
+
+import Staff from '../components/staffs/Staff.js';
+import StaffTableColNames from '../components/staffs/StaffTableColNames.js';
+
 import '../styles/Staffs.css'
 
 const Staffs = () => {
@@ -11,7 +18,6 @@ const Staffs = () => {
 
   const staffsData = async () => {
     const { data } = await axios.get('/staffs');
-    console.log(data);
     setStaffs(data);
   };
 
@@ -19,43 +25,16 @@ const Staffs = () => {
     <div className='staffs'>
       <table>
         <thead>
-          <tr>
-            <th>ΟΝΟΜΑ</th>
-            <th>ΕΠΩΝΥΜΟ</th>
-            <th>ΑΣΜΑ</th>
-            <th>ΣΩΜΑ</th>
-            <th>ΒΑΘΜΟΣ</th>
-            <th>ΕΙΔΙΚΟΤΗΤΑ</th>
-            <th>ΠΑΡΟΥΣΙΑΣΤΙΚΟ</th>
-            <th>ΚΙΝΗΤΟ ΤΗΛΕΦΩΝΟ</th>
-            <th>ΥΠΗΡΕΣΙΑΚΟ ΤΗΛΕΦΩΝΟ</th>
-            <th>ΘΕΣΗ ΕΥΘΥΝΗΣ</th>
-            <th>ΕΙΔΙΚΗ ΚΑΤΗΓΟΡΙΑ</th>
-            <th>ΑΟΡΙΣΤΟΥ</th>
-            <th>ΠΛΗΡΩΜΗ ΜΤΑ</th>
-          </tr>
+          <StaffTableColNames/>
         </thead>
         <tbody>
           {staffs.map((staff)=> (
-              <tr>
-                <td>{staff.name}</td>
-                <td>{staff.surname}</td>
-                <td>{staff.asma}</td>
-                <td>{staff.unit}</td>
-                <td>{staff.rank}</td>
-                <td>{staff.specialization}</td>
-                <td>{staff.display_name}</td>
-                <td>{staff.mobile_phone}</td>
-                <td>{staff.work_phone}</td>
-                <td>{staff.position_of_responsibility}</td>
-                <td>{staff.special_category}</td>
-                <td>{staff.indefinitely}</td>
-                <td>{staff.mta_payment}</td>
-              </tr>
+              <Staff key={staff.asma} staff={staff}/>
             )  
           )}
         </tbody>
       </table>
+      <AddStaffButton/>
     </div>
   )
 }

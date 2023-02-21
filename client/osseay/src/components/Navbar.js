@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import NavbarLinks from '../utils/NavbarLinks';
 
-import Logo from '../assets/110pm_EMBL-transparent.png';
+import Logo from '../assets/110pm_emblem_transparent.png';
 import '../styles/Navbar.css';
 import ReorderIcon from '@mui/icons-material/Reorder';
 
