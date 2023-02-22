@@ -1,18 +1,22 @@
 {
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
+    // "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime"
   ],
   "plugins": [
-    "react"
+    "react",
+    "css"
   ],
   "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "eqeqeq": "error",
     "no-console": "warn",
     "react/display-name": "off",
     "react/no-children-prop": "off",
-    "react/react-in-jsx-scope": "off",
     "indent": [
       "error",
       2

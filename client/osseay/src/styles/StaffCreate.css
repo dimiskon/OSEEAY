@@ -1,35 +1,49 @@
 .createStaff {
   width: 500px;
-  height: 600px;
-  background-color: deepskyblue;
+  height: 600px; 
+  background-color: #03074f;
   box-shadow: 3px 3px 10px;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: 10px 0px 10px 0px;
 }
 
 .createStaff .title {
   color: white;
-  flex: 20%;
+  height: 10vh;
   width: 100%;
   display: grid;
   place-items: center;
-  font-size: 35px;
+  font-size: 20px;
 }
 
 .createStaff .inputs {
-  flex: 80%;
+  flex: 50%;
   width: 100%;
 }
 
+.inputs .side_by_side {
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  justify-content: space-evenly;
+}
+
+.inputs p {
+  color: white;
+  font-size: 15px;
+  margin: 0px 2px 4px 5px;
+}
+
 .inputs input {
-  width: 250px;
-  height: 40px;
-  font-size: 20px;
+  width: 180px;
+  height: 35px;
+  font-size: 15px;
   border-radius: 6px;
   border: none;
   padding-left: 10px;
-  margin-top: 10px;
 }
 
 .inputs #submit {

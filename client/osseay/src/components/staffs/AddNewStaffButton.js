@@ -7,11 +7,14 @@ const AddNewStaffButton = () => {
 
   return (
     <div className='addButton'>
-      <Button onClick={() => navigate('/staffs/create')} variant="contained"
+      <Button
+        onClick={() => navigate('/staffs/create')}
+        variant="contained"
         style={{
           textTransform: 'none',
           padding: '10px',
-          margin: '5px'
+          margin: '5px',
+          backgroundColor: "#03074f"
         }}>
         Add
       </Button>
