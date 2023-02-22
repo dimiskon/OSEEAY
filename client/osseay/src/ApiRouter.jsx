@@ -2,13 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // Components
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
 
 // Pages
-import HomePage from './pages/HomePage';
-import Staffs from './pages/Staffs';
-import StaffCreate from './pages/StaffCreate';
+import HomePage from './pages/HomePage.jsx';
+import Staffs from './pages/Staffs.jsx';
+import StaffCreate from './pages/StaffCreate.jsx';
 
 import './ApiRouter.css';
 

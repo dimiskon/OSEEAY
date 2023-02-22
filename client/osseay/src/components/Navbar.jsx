@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import NavbarLinks from '../utils/NavbarLinks';
+import '../styles/Navbar.css';
 
 import Logo from '../assets/110pm_emblem_transparent.png';
-import '../styles/Navbar.css';
 import ReorderIcon from '@mui/icons-material/Reorder';
-
 
 const Navbar = () => {
   const [openLinks, setOpenLinks] = useState(false);
@@ -19,7 +18,7 @@ const Navbar = () => {
         <img alt='' src={Logo}></img>
         <div className='texts'>
           <h1 className='polemikiAerText'>ΠΟΛΕΜΙΚΗ ΑΕΡΟΠΟΡΙΑ</h1>
-          <h2 className='osseayText'> 110ΠΜ - ΟΣΣΕΑΥ </h2>   
+          <h2 className='osseayText'> 110ΠΜ - ΟΣΣΕΑΥ </h2>
           <h2 className='maximText'>“Μαχιμώτατοι οι ισχύοντες”</h2>
         </div>
         <div className='hiddenLinks'>
@@ -31,7 +30,7 @@ const Navbar = () => {
         <button onClick={toggleNavbar}>
           <ReorderIcon />
         </button>
-     </div>
+      </div>
     </div>
   )
 }

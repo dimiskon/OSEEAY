@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import Staff from '../components/staffs/Staff.js';
-import StaffTableColNames from '../components/staffs/StaffTableColNames.js';
+import Staff from '../components/staffs/Staff';
+import StaffTableColNames from '../components/staffs/StaffTableColNames';
 
 import { TextField } from '@mui/material';
 
 import '../styles/Staffs.css'
-import AddNewStaffButton from '../components/staffs/AddNewStaffButton.js';
+import AddNewStaffButton from '../components/staffs/AddNewStaffButton';
 
 const Staffs = () => {
   const [staffs, setStaffs] = useState([]);

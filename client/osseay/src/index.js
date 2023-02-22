@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import ApiRouter from './ApiRouter.js';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
+
+import './index.css';
+import ApiRouter from './ApiRouter';
 
 axios.defaults.baseURL = 'http://localhost:5000';
 
