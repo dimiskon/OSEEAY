@@ -40,31 +40,6 @@ module.exports = (sequelize, Sequelize) => {
     work_phone: {
       type: Sequelize.STRING,
       allowNull: true
-    },
-    position_of_responsibility: {
-      type: Sequelize.BOOLEAN,
-      defaultValue: false,
-      allowNull: false
-    },
-    is_special_category: {
-      type: Sequelize.BOOLEAN,
-      defaultValue: false,
-      allowNull: false
-    },
-    special_category: {
-      type: Sequelize.ENUM('ΠΟΛΥΤΕΚΝΙΑ', 'ΤΡΙΤΕΚΝΙΑ', 'ΑΜΕΑ', 'ΜΟΝΟΓΟΝΕΙΚΗ'),
-      allowNull: true,
-      defaultValue: null
-    },
-    indefinitely: {
-      type: Sequelize.BOOLEAN,
-      defaultValue: false,
-      allowNull: false
-    },
-    mta_payment: {
-      type: Sequelize.BOOLEAN,
-      defaultValue: false,
-      allowNull: false
     }
   }, {
     timestamps: true,
@@ -113,7 +88,6 @@ module.exports = (sequelize, Sequelize) => {
     staffs.hasOne(models.amea_requests, {
       foreignKey: { name: 'asma', allowNull: false }
     });
-
   };
 
   return staffs;
