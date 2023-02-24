@@ -10,11 +10,11 @@ import HomePage from './pages/HomePage.jsx';
 import Staffs from './pages/Staffs.jsx';
 import StaffCreate from './pages/StaffCreate.jsx';
 
-import './ApiRouter.css';
+import './App.css';
 
-const ApiRouter = () => {
+const App = () => {
   return (
-    <div className='ApiRouter'>
+    <div className='App'>
       <Router>
         <Navbar/>
         <Routes>
@@ -28,4 +28,4 @@ const ApiRouter = () => {
   )
 }
 
-export default ApiRouter;
+export default App;

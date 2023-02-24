@@ -4,14 +4,14 @@ import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
 
 import './index.css';
-import ApiRouter from './ApiRouter';
+import App from './App';
 
 axios.defaults.baseURL = 'http://localhost:5000';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ApiRouter />
+    <App />
   </React.StrictMode>
 );
 

@@ -1,6 +1,6 @@
 .homePage {
   width: 100%;
-  height: 76vh;
+  height: 75dvh;
   display: flex;
   justify-content: center;
   align-items: left;
@@ -11,38 +11,9 @@
   font-family: "Gill Sans"s, "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.headerContainer {
-  position:absolute;
-  top: 100px;
-  width: auto;
-  margin-left: 50px;
-}
-
-.headerContainer h1 {
-  height: 10px;
-  color: black;
-}
-
-.headerContainer h2 {
-  height: 10px;
-  left: 130px;
-  color: black;
-}
-
-.headerContainer p {
-  font-size: 22px;
-  left: 10px;
-  font-weight: lighter;
-  color: black;
-}
-
 @media only screen and (max-width: 650px) {
   .homePage {
     justify-content: center;
     align-items: center;
-  }
-  
-  .headerContainer {
-    display: none;
   }
 }
