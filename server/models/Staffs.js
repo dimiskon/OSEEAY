@@ -54,6 +54,11 @@ module.exports = (sequelize, Sequelize) => {
       foreignKey: { name: 'asma', allowNull: false }
     });
 
+    // staffs <-1------------1-> staffs_metadata
+    staffs.hasOne(models.staffs_metadata, {
+      foreignKey: { name: 'asma', allowNull: false }
+    });
+
     // staffs <-1------------1-> family_data
     staffs.hasOne(models.family_data, {
       foreignKey: { name: 'asma', allowNull: false }

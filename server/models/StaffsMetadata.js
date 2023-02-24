@@ -38,6 +38,11 @@ module.exports = (sequelize, Sequelize) => {
     createdAt: 'created_at',
     updatedAt: 'updated_at',
     deletedAt: 'deleted_at',
+    freezeTableName: true,
+    name: {
+      singular: 'staff_metadata',
+      plural: 'staffs_metadata'
+    }
   });
 
   staffs_metadata.associate = function(models) {

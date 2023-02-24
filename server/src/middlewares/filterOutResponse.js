@@ -38,12 +38,14 @@ module.exports = async(req, res, next) => {
     }
 
     if (error) {
-      console.error('response validation error:', error);
+      console.error('response validation error:', error.details);
       next({
         statusCode: 400,
-        message: error
+        message: error.details
       });
+      return;
     }
+
     console.log('Filtering Response: Successfully!');
     res.send(value);
   } catch (err) {
@@ -53,5 +55,6 @@ module.exports = async(req, res, next) => {
       statusCode: 400,
       message: filter_response_warning
     });
+    return;
   }
 };
