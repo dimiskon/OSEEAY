@@ -9,24 +9,29 @@ module.exports = (sequelize, Sequelize) => {
       primaryKey: true,
       autoIncrement: true
     },
-    wife: {
+    spouse: {
       type: Sequelize.BOOLEAN,
       defaultValue: false,
       allowNull: false
     },
-    wife_name: {
+    spouse_name: {
       type: Sequelize.STRING,
       allowNull: true,
       defaultValue: null
     },
-    wife_surname: {
+    spouse_surname: {
       type: Sequelize.STRING,
       allowNull: true,
       defaultValue: null
     },
-    wife_occupation: {
+    spouse_occupation: {
       type: Sequelize.STRING,
       allowNull: true
+    },
+    is_military: {
+      type: Sequelize.BOOLEAN,
+      defaultValue: false,
+      allowNull: false
     },
     num_of_childs: {
       type: Sequelize.INTEGER,
@@ -48,7 +53,7 @@ module.exports = (sequelize, Sequelize) => {
     });
 
     // family_data <-1------------*-> childs_data
-    family_data.belongsTo(models.childs_data, {
+    family_data.hasMany(models.childs_data, {
       foreignKey: { name: 'family_id', allowNull: false }
     });
 

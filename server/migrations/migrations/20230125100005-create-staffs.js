@@ -32,7 +32,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-
       display_name: {
         type: Sequelize.TEXT,
         allowNull: false,
@@ -44,31 +43,6 @@ module.exports = {
       work_phone: {
         type: Sequelize.STRING,
         allowNull: true
-      },
-      position_of_responsibility: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
-        allowNull: false
-      },
-      is_special_category: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
-        allowNull: false
-      },
-      special_category: {
-        type: Sequelize.ENUM('ΠΟΛΥΤΕΚΝΙΑ', 'ΤΡΙΤΕΚΝΙΑ', 'ΑΜΕΑ', 'ΜΟΝΟΓΟΝΕΙΚΗ'),
-        allowNull: true,
-        defaultValue: null
-      },
-      indefinitely: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
-        allowNull: false
-      },
-      mta_payment: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
-        allowNull: false
       },
       created_at: {
         allowNull: false,
