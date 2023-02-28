@@ -1,4 +1,21 @@
-import React from 'react'
+import React from 'react';
+
+import { Button } from '@mui/material';
+
+const customButton = (props) => {
+
+  return (
+    <Button
+      variant="contained"
+      style={{
+        width: '110px',
+        textTransform: 'none',
+        padding: '10px',
+        margin: '5px',
+        backgroundColor: "#03074f"
+      }}>Επεξεργασία</Button>
+  )
+}
 
 const Staff = ({ staff, index }) => {
   return (
@@ -17,6 +34,26 @@ const Staff = ({ staff, index }) => {
       <td>{staff.special_category}</td>
       <td>{staff.indefinitely}</td>
       <td>{staff.mta_payment}</td>
+      <td>
+        <Button
+          variant="contained"
+          style={{
+            width: '110px',
+            textTransform: 'none',
+            padding: '10px',
+            margin: '5px',
+            backgroundColor: "#03074f"
+          }}>Επεξεργασία</Button>
+        <Button
+          variant="contained"
+          style={{
+            width: '110px',
+            textTransform: 'none',
+            padding: '10px',
+            margin: '5px',
+            backgroundColor: "#a40c0c"
+          }}>Διαγραφή</Button>
+      </td>
     </tr>
   )
 }

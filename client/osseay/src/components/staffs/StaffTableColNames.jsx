@@ -17,6 +17,7 @@ const StaffTableColNames = () => {
       <th>ΕΙΔΙΚΗ ΚΑΤΗΓΟΡΙΑ</th>
       <th>ΑΟΡΙΣΤΟΥ</th>
       <th>ΠΛΗΡΩΜΗ ΜΤΑ</th>
+      <th>ΕΠΙΛΟΓΕΣ</th>
     </tr>
   )
 }

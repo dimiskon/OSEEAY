@@ -4,7 +4,7 @@ import axios from 'axios';
 import Staff from '../components/staffs/Staff';
 import StaffTableColNames from '../components/staffs/StaffTableColNames';
 
-import { TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 
 import '../styles/Staffs.css'
 import AddNewStaffButton from '../components/staffs/AddNewStaffButton';

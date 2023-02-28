@@ -16,15 +16,19 @@ td {
   border: 1px solid rgb(0, 0, 0);
   text-align: center;
   padding: 10px;
-  font-size: 1vw;
 }
 
 th {
-  background-color: rgb(100, 143, 229);
+  background-color: #03074f;
+  color: white;
+  font-size: 17px;
+  border: 1px solid #4f4e4e;
+  color: white;
 }
 
 td {
   background-color: lightgray;
+  font-size: 17px;
 }
 
 .staffs .searchField {
@@ -33,33 +37,33 @@ td {
   align-self: center;
 }
 
-@media only screen and (max-width: 1100px) {
-  .staffs td,th {
-    font-size: 0.8vw;
+@media only screen and (max-width: 1350px) {
+  td,th {
+    font-size: 0.8dvw;
   } 
 }
 
 @media only screen and (max-width: 800px) {
-  .staffs td,th {
-    font-size: 0.75vw;
+  td,th {
+    font-size: 0.75dvw;
   } 
 }
 
 @media only screen and (max-width: 700px) {  
-  .staffs td,th {
-    font-size: 0.65vw;
+  td,th {
+    font-size: 0.65dvw;
   }  
 }
 
 @media only screen and (max-width: 550px) {  
-  .staffs td,th {
-    font-size: 0.5vw;
+  td,th {
+    font-size: 0.5dvw;
   }  
 }
 
 
 @media only screen and (max-width: 400px) {  
-  .staffs td,th {
-    font-size: 0.4vw;
+  td,th {
+    font-size: 0.4dvw;
   }  
 }
