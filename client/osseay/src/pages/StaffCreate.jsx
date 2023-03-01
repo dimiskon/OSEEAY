@@ -8,9 +8,9 @@ const StaffCreate = () => {
   return (
     <div className="createStaff">
       <div className='title'>
-        <h2>Φόρμα Δημιουργίας Προσωπικού</h2>
+        <h1>Φόρμα Δημιουργίας Προσωπικού</h1>
       </div>
-      <div className='inputs'>
+      <div className='personal_inputs'>
         <form>
           <SideBySideInputFields p1='Όνομα' name_1="name" p2='Επώνυμο' name_2="surname" />
           <SideBySideInputFields p1='ΑΣΜΑ' name_1="asma" p2='Σώμα' name_2="unit" />
@@ -18,6 +18,9 @@ const StaffCreate = () => {
           <SideBySideInputFields p1='Κινητό Τηλ.' name_1="mobile_phone" p2='Υπηρεσιακό Τηλ.' name_2="work_phone" />
           <SideBySideInputFields p1='Θέση Ευθύνης' name_1="position_of_responsibility" p2='Ειδική Κατηγορία' name_2="special_category" />
         </form>
+      </div>
+      <div className='family_inputs'>
+
       </div>
     </div>
   )

@@ -32,7 +32,6 @@ td {
 }
 
 .staffs .searchField {
-  padding: 0vh 0vw 2vh 0vh;
   display: flex;
   align-self: center;
 }

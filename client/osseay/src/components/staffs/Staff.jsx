@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Button } from '@mui/material';
 
-const customButton = (props) => {
-
+const CustomButton = (props) => {
+  const { backgroundColor, title } = props;
   return (
     <Button
       variant="contained"
@@ -12,8 +12,8 @@ const customButton = (props) => {
         textTransform: 'none',
         padding: '10px',
         margin: '5px',
-        backgroundColor: "#03074f"
-      }}>Επεξεργασία</Button>
+        backgroundColor
+      }}>{title}</Button>
   )
 }
 
@@ -35,24 +35,8 @@ const Staff = ({ staff, index }) => {
       <td>{staff.indefinitely}</td>
       <td>{staff.mta_payment}</td>
       <td>
-        <Button
-          variant="contained"
-          style={{
-            width: '110px',
-            textTransform: 'none',
-            padding: '10px',
-            margin: '5px',
-            backgroundColor: "#03074f"
-          }}>Επεξεργασία</Button>
-        <Button
-          variant="contained"
-          style={{
-            width: '110px',
-            textTransform: 'none',
-            padding: '10px',
-            margin: '5px',
-            backgroundColor: "#a40c0c"
-          }}>Διαγραφή</Button>
+        <CustomButton backgroundColor='#03074f' title='Επεξεργασία' />
+        <CustomButton backgroundColor="#a40c0c" title='Διαγραφή' />
       </td>
     </tr>
   )
