@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button, IconButton } from '@mui/material';
+import { IconButton, Tooltip } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import PeopleOutlineTwoToneIcon from '@mui/icons-material/PeopleOutlineTwoTone';
 
 import './AddNewStaffButton.css';
 
@@ -10,29 +10,27 @@ const AddNewStaffButton = () => {
 
   return (
     <div className='addButton'>
-      <IconButton
-        onClick={() => navigate('/staffs/create')}
-        title='Δημιουργία'>
-        <AccountBoxIcon
-          style={{
-            textTransform: 'none',
-            fontSize: '60px',
-            color: "#03074f"
-          }}
-        />
-      </IconButton>
-      {/* <Button
-        title='Δημιουργία'
-        onClick={() => navigate('/staffs/create')}
-        variant="contained"
-        style={{
-          textTransform: 'none',
-          padding: '10px',
-          margin: '5px',
-          backgroundColor: "#03074f"
-        }}>
-        Δημιουργία
-      </Button> */}
+      <Tooltip
+        componentsProps={{
+          tooltip: {
+            sx: {
+              bgcolor: '#03074f',
+              fontSize: '1.1rem',
+            },
+          },
+        }}
+        title='Προσθήκη Προσωπικού'
+        placement='left'>
+        <IconButton onClick={() => navigate('/staffs/create')}>
+          <PeopleOutlineTwoToneIcon
+            style={{
+              textTransform: 'none',
+              fontSize: '60px',
+              color: "#03074f"
+            }}
+          />
+        </IconButton>
+      </Tooltip>
     </div>
   )
 }
