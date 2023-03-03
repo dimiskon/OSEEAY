@@ -1,6 +1,6 @@
-.createStaff {
+.create-staff {
   width: 90%;
-  height: 72dvh; 
+  height: 73dvh;
   background-color: #03074f;
   box-shadow: 3px 3px 10px;
   font-family: Arial, Helvetica, sans-serif;
@@ -11,7 +11,7 @@
   border-radius: 15px;
 }
 
-.createStaff .title h1 {
+.create-staff .title h1 {
   color: white;
   height: 100%;
   width: 100%;
@@ -21,39 +21,9 @@
   flex-wrap: wrap;
 }
 
-
-.createStaff .personal_inputs {
-  flex: 50%;
-  width: 50%;
-  padding: 5px;
-  align-self: start;
-  display: flex;
-  justify-content:center;
-  margin: 5px;
-}
-
-.personal_inputs .side_by_side {
-  display: flex;
-  flex-direction: row;
-  padding: 5px;
-}
-
-.personal_inputs p {
-  color: white;
-  font-size: 15px;
-  margin-left: 25px;
-}
-
-.personal_inputs input {
-  width: 180px;
-  height: 35px;
-  font-size: 15px;
-  border-radius: 6px;
-  border: none;
-  padding-left: 10px;
-  margin-left: 25px;
-}
-
-.personal_inputs #submit {
-  cursor: pointer;
+.staff-form {
+ width: 100%;
+ display: grid;
+ justify-content:flex-start;
+ padding-left: 25px;
 }

@@ -11,6 +11,7 @@ import Staffs from './pages/Staffs/Staffs.jsx';
 import StaffCreate from './pages/Staffs/StaffCreate.jsx';
 
 import './App.css';
+import { CssBaseline } from '@mui/material';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         </Routes>
         <Footer/>
       </Router>
+      <CssBaseline />
     </div>
   )
 }

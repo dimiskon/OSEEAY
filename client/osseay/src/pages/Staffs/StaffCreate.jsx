@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { Grid, TextField, Select, InputLabel, MenuItem } from '@mui/material';
+import { Grid } from '@mui/material';
 
 import useStaffForm from '../../components/staffs/useStaffForm';
 
-import SideBySideInputFields from '../../utils/SideBySideInputFields';
+import SelectorUnit from '../../components/staffs/StaffsCreate/SelectorUnit';
+import InputTextField from '../../components/staffs/StaffsCreate/InputTextField';
+
+import '../../styles/Staffs/StaffCreate.css';
 
 const StaffCreate = () => {
 
@@ -13,56 +16,27 @@ const StaffCreate = () => {
     handleOnSubmit
   } = useStaffForm();
 
-  const [unit, setUnit] = useState(1);
-  const handleChange = (event) => {
-    setUnit(event.target.value);
-  };
-
   return (
     <div className="create-staff">
       <div className='title'>
         <h1>Φόρμα Δημιουργίας Προσωπικού</h1>
       </div>
       <form className='staff-form'>
-        <Grid container gap={1}>
-          <Grid container xs={6} spacing={1}>
-            <Grid item xs={6}>
-              <InputLabel style={{ fontWeight: 'bold' }}>Όνομα</InputLabel>
-              <TextField variant='outlined' name='Όνομα' label='Όνομα...'/>
-            </Grid>
-            <Grid item xs={6}>
-              <InputLabel style={{ fontWeight: 'bold' }}>Επώνυμο</InputLabel>
-              <TextField variant='outlined' name='Επώνυμο' label='Επώνυμο...'/>
-            </Grid>
-            <Grid item xs={6}>
-              <InputLabel style={{ fontWeight: 'bold' }} >ΑΣΜΑ</InputLabel>
-              <TextField variant='outlined' name='ΑΣΜΑ' label='ΑΣΜΑ...'/>
-            </Grid>
-            <Grid item xs={6}>
-              <InputLabel>Σώμα</InputLabel>
-              <Select
-                onChange={handleChange}
-                value={unit}
-              >
-                <MenuItem value={1}>ΠΟΛΕΜΙΚΗ ΑΕΡΟΠΟΡΙΑ</MenuItem>
-                <MenuItem value={2}>ΣΤΡΑΤΟΣ ΞΗΡΑΣ</MenuItem>
-                <MenuItem value={3}>ΠΟΛΕΜΙΚΟ ΝΑΥΤΙΚΟ</MenuItem>
-              </Select>
-
-            </Grid>
-            <Grid item xs={6}>
-              <TextField variant='outlined' name='Επώνυμο' label='Επώνυμο...'/>
-            </Grid>
+        <Grid container spacing={2}>
+          <Grid item xs={6}>
+            <InputTextField name='Όνομα' />
+            <InputTextField name='ΑΣΜΑ' />
+            <InputTextField name='Επώνυμο'/>
+            <InputTextField name='Επώνυμο'/>
+            <InputTextField name='Επώνυμο'/>
 
           </Grid>
-
-          <Grid container xs={6} spacing={1}>
-            <Grid item xs={6}>
-              <TextField variant='outlined' name='Όνομα' label='Όνομα...'/>
-            </Grid>
-            <Grid item xs={6}>
-              <TextField variant='outlined' name='Επώνυμο' label='Επώνυμο...'/>
-            </Grid>
+          <Grid item xs={6}>
+            <InputTextField name='Επώνυμο'/>
+            <InputTextField name='Ειδικότητα'/>
+          </Grid>
+          <Grid item xs={6}>
+            <SelectorUnit items={['ΠΟΛΕΜΙΚΗ ΑΕΡΟΠΟΡΙΑ', 'ΣΤΡΑΤΟΣ ΞΗΡΑΣ', 'ΠΟΛΕΜΙΚΟ ΝΑΥΤΙΚΟ']}/>
           </Grid>
         </Grid>
       </form>
