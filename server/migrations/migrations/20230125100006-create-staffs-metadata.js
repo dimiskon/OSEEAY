@@ -35,11 +35,6 @@ module.exports = {
         allowNull: true,
         defaultValue: null
       },
-      indefinitely: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
-        allowNull: false
-      },
       mta_payment: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
