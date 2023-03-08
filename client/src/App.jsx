@@ -8,9 +8,11 @@ import Footer from './components/Footer.jsx';
 
 // Pages
 import HomePage from './pages/HomePage.jsx';
-import Staffs from './pages/Staffs/Staffs.jsx';
 
-import StaffCreate from './pages/Staffs/StaffCreate.jsx';
+// Staffs
+import Staffs from './pages/Staffs/Staffs.jsx';
+// import StaffCreate from './pages/Staffs/StaffCreate.jsx';
+import StaffCreateMUi from './pages/Staffs/StaffCreateMUi.jsx';
 
 import './App.css';
 
@@ -27,7 +29,8 @@ const App = () => {
     typography: {
       h2: {
         fontSize: '1.5rem',
-        fontWeight: 500
+        fontWeight: 500,
+        fontFamily: 'Roboto'
       },
       navbar: {
         fontSize: '5rem'
@@ -43,7 +46,8 @@ const App = () => {
             <Route exact path='/' element={<HomePage/>} />
             {/* {Staffs} */}
             <Route exact path='/staffs' element={<Staffs/>} />
-            <Route exact path='/staffs/create' element={<StaffCreate/>} />
+            <Route exact path='/staffs/create' element={<StaffCreateMUi/>} />
+            {/* <Route exact path='/staffs/create' element={<StaffCreate/>} /> */}
           </Routes>
           <Footer className='footer'/>
         </Router>

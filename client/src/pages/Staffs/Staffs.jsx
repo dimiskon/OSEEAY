@@ -37,7 +37,7 @@ const StaffsMUi = () => {
       width: '95%'
     }}>
       <Box sx={{
-        m: 3,
+        m: 2,
         display: 'flex',
         gap: '10px',
         justifyItems: 'flex-start'

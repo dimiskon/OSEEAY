@@ -3,13 +3,17 @@ import React, { useState } from 'react';
 export default function useStaffForm() {
   const [staffData, setStaffData] = useState({});
 
-  const handleOnSubmit = (data) => {
-    setStaffData(...data);
+  const handleInputChange = (data) => {
+    const [name, value] = data.target;
+    setStaffData({
+      ...data,
+      [name]: value
+    });
   }
 
   return (
     staffData,
     setStaffData,
-    handleOnSubmit
+    handleInputChange
   )
 };

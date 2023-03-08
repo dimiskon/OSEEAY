@@ -1,35 +1,43 @@
 import React, { useState } from 'react';
-import { Grid } from '@mui/material';
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { Unstable_Grid2 as Grid, Box, Typography, FormControl, TextField } from '@mui/material';
 
 import useStaffForm from '../../components/Staffs/useStaffForm';
 
 import SelectorUnit from '../../components/Staffs/StaffsCreate/SelectorUnit';
 import InputTextField from '../../components/Staffs/StaffsCreate/InputTextField';
 
-import '../../styles/Staffs/StaffCreate.css';
-
 const StaffCreate = () => {
 
   const {
     staffData,
     setStaffData,
-    handleOnSubmit
+    handleInputChange
   } = useStaffForm();
 
   return (
-    <div className="create-staff">
-      <div className='title'>
-        <h1>Φόρμα Δημιουργίας Προσωπικού</h1>
-      </div>
-      <form className='staff-form'>
+    <Box padding={5} width='100vh'>
+      {/* <div className='title'> */}
+      <Typography variant='h1' sx={{
+        fontSize: '30px',
+        m: 2,
+        display: 'flex',
+        justifyContent: 'center',
+        border: '5px solid black'
+      }}>
+        Φόρμα Δημιουργίας Προσωπικού
+      </Typography>
+      {/* </div> */}
+      <FormControl sx={{
+        p: 2
+      }}>
         <Grid container spacing={2}>
           <Grid item xs={6}>
-            <InputTextField name='Όνομα' />
-            <InputTextField name='ΑΣΜΑ' />
-            <InputTextField name='Επώνυμο'/>
-            <InputTextField name='Επώνυμο'/>
-            <InputTextField name='Επώνυμο'/>
+            <TextField variant='outlined' ></TextField>
+            {/* <InputTextField name='Όνομα' /> */}
+            {/* <InputTextField name='ΑΣΜΑ' /> */}
+            {/* <InputTextField name='Επώνυμο'/> */}
+            {/* <InputTextField name='Επώνυμο'/> */}
+            {/* <InputTextField name='Επώνυμο'/> */}
           </Grid>
           <Grid item xs={6}>
             <InputTextField name='Επώνυμο'/>
@@ -39,8 +47,8 @@ const StaffCreate = () => {
             <SelectorUnit items={['ΠΟΛΕΜΙΚΗ ΑΕΡΟΠΟΡΙΑ', 'ΣΤΡΑΤΟΣ ΞΗΡΑΣ', 'ΠΟΛΕΜΙΚΟ ΝΑΥΤΙΚΟ']}/>
           </Grid>
         </Grid>
-      </form>
-    </div>
+      </FormControl>
+    </Box>
   )
 }
 

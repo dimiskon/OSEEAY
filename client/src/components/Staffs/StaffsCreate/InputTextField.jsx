@@ -1,27 +1,16 @@
 import React from 'react';
 
-import { InputLabel, TextField } from '@mui/material';
+import { TextField } from '@mui/material';
 
-const InputTextField = (props) => {
-  const { name } = props;
+const CustomTextField = (props) => {
+  const { name, isRequired } = props;
   return (
-    <>
-        <InputLabel
-          style={{
-            fontWeight: 'bold',
-            color: 'white'
-          }}>
-          {name}
-        </InputLabel>
-        <TextField
-          style={{
-            backgroundColor: 'white'
-          }}
-          variant='outlined'
-          name={name}
-          label={name + '...'}/>
-    </>
+    <TextField
+      required={isRequired}
+      variant='filled'
+      placeholder={name + '...'}
+      label={name}/>
   )
 }
 
-export default InputTextField;
+export default CustomTextField;
