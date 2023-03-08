@@ -21,15 +21,15 @@ module.exports = {
           key: 'asma'
         }
       },
-      house_request_id: {
+      building_request_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'houses_requests',
-          key: 'house_request_id'
+          model: 'buildings_requests',
+          key: 'building_request_id'
         }
       },
-      new_house_request_date: {
+      new_building_request_date: {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: date

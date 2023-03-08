@@ -10,7 +10,7 @@ module.exports = (sequelize, Sequelize) => {
       autoIncrement: true
     },
     base: {
-      type: Sequelize.ENUM('110PM', '140SEPHP', '1oAKE', 'CAOC', 'ATA', 'DAK', 'EKAE', 'MAFK', 'XXX'),
+      type: Sequelize.STRING,
       defaultValue: 'XXX',
       allowNull: false
     },

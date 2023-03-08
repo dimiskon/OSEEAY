@@ -12,7 +12,7 @@ module.exports = (sequelize, Sequelize) => {
       primaryKey: true,
       autoIncrement: true
     },
-    new_house_request_date: {
+    new_building_request_date: {
       allowNull: false,
       type: Sequelize.DATE,
       defaultValue: date
@@ -35,9 +35,9 @@ module.exports = (sequelize, Sequelize) => {
       foreignKey: { name: 'asma', allowNull: false }
     });
 
-    // refusals <-1------------1-> houses_requests
-    refusals.belongsTo(models.houses_requests, {
-      foreignKey: { name: 'house_request_id', allowNull: false }
+    // refusals <-1------------1-> buildings_requests
+    refusals.belongsTo(models.buildings_requests, {
+      foreignKey: { name: 'building_request_id', allowNull: false }
     });
   };
 

@@ -6,12 +6,18 @@ const response_schema = require('../../joiSchemas/staffs/responses/findAllStaffs
 
 module.exports = async(req, res, next) => {
   const db = _.get(req, 'db', null);
-  const { staffs } = _.get(db, 'sequelize.models', {});
+  const { staffs, staffs_metadata } = _.get(db, 'sequelize.models', {});
 
-  const staffRes = await staffs.findAll();
-  if (staffRes) {
+  const staff_res = await staffs.findAll({
+    include: [{
+      model: staffs_metadata,
+      required: true
+    }]
+  });
+
+  if (staff_res) {
     res.response_schema = response_schema;
-    res.response_body = staffRes;
+    res.response_body = staff_res;
     next();
   } else {
     next({
@@ -19,5 +25,4 @@ module.exports = async(req, res, next) => {
       message: `ERROR: Cannot find any staff members!`
     });
   }
-  next();
 };

@@ -1,0 +1,29 @@
+.create-staff {
+  width: 90%;
+  height: 73dvh;
+  background-color: #03074f;
+  box-shadow: 3px 3px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0px 10px 0px;
+  border-radius: 15px;
+}
+
+.create-staff .title h1 {
+  color: white;
+  height: 100%;
+  width: 100%;
+  padding: 10px;  
+  align-content: center;
+  font-size: 28px;
+  flex-wrap: wrap;
+}
+
+.staff-form {
+ width: 100%;
+ display: grid;
+ justify-content:flex-start;
+ padding-left: 25px;
+}

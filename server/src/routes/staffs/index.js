@@ -21,7 +21,9 @@ staffsRouter.param('asma', (req, res, next, asma) => {
   next();
 });
 
+// Get All Staffs - /staffs
 staffsRouter.get('/', findAllStaffs);
+// Router: /staffs/:asma
 staffsRouter.route('/:asma')
   // POST Staff
   .post(retrieveEntryByPk({
