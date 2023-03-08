@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Grid } from '@mui/material';
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
-import useStaffForm from '../../components/staffs/useStaffForm';
+import useStaffForm from '../../components/Staffs/useStaffForm';
 
-import SelectorUnit from '../../components/staffs/StaffsCreate/SelectorUnit';
-import InputTextField from '../../components/staffs/StaffsCreate/InputTextField';
+import SelectorUnit from '../../components/Staffs/StaffsCreate/SelectorUnit';
+import InputTextField from '../../components/Staffs/StaffsCreate/InputTextField';
 
 import '../../styles/Staffs/StaffCreate.css';
 
