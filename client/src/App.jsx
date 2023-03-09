@@ -29,8 +29,6 @@ const App = () => {
     typography: {
       h2: {
         fontSize: '1.5rem',
-        fontWeight: 500,
-        fontFamily: 'Roboto'
       },
       navbar: {
         fontSize: '5rem'
