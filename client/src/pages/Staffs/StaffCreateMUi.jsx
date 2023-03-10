@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import { Box, Button, Paper, Typography } from '@mui/material';
-
-import SaveAsIcon from '@mui/icons-material/SaveAs';
+import React from 'react';
+import { Box, Paper, Typography } from '@mui/material';
 
 import BasicStaffDataGrid from '../../components/Staffs/StaffsCreate/BasicStaffDataGrid';
 import useStaffForm from '../../components/Staffs/useStaffForm';
+import FormFooter from '../../components/Staffs/StaffsCreate/FormFooter';
 
 const StaffCreateMUi = () => {
   const {
@@ -19,7 +18,8 @@ const StaffCreateMUi = () => {
         m: 4,
         width: '60rem',
         minWidth: '20rem',
-      }} elevation={6}>
+      }}
+      elevation={6}>
         <Box>
           <Typography variant='h2' fontWeight='bold' sx={{
             color: '#03074f',
@@ -30,21 +30,7 @@ const StaffCreateMUi = () => {
           </Typography>
         </Box>
         <BasicStaffDataGrid data={staffData} handleInputChange={handleInputChange}/>
-        <Paper variant='filled' sx={{
-          display: 'flex',
-          justifyContent: 'flex-end',
-          mt: 2,
-          height: '65px',
-          borderRadius: '2px',
-          bgcolor: '#d9d9d96b'
-        }}>
-
-          <Button variant='contained' color='success' sx={{ right: '10px', m: 1 }}
-            startIcon={<SaveAsIcon/>}
-          >
-            Save
-          </Button>
-        </Paper>
+        <FormFooter/>
       </Paper>
     </Box>
   )
