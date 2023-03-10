@@ -32,21 +32,13 @@ const StaffsMUi = () => {
   };
 
   return (
-    <Box sx={{
-      p: 3,
-      width: '95%'
-    }}>
-      <Box sx={{
-        m: 2,
-        display: 'flex',
-        gap: '10px',
-        justifyItems: 'flex-start'
-      }}>
+    <Box sx={{ p: 3, width: '95%' }}>
+      <Box sx={{ m: 2, display: 'flex', gap: '0px', justifyContent: 'flex-start' }}>
         <AddNewStaffButton />
-        <TextField label='Search...' variant='outlined' />
+        <TextField label='Αναζήτηση...' variant='filled' sx={{ width: '24rem' }}/>
       </Box>
-      <TableContainer component={Paper}>
-        <Table stickyHeader aria-label="sticky table" sx={{ minWidth: 700 }}>
+      <TableContainer component={Paper} sx={{ overflowX: 'initial' }}>
+        <Table stickyHeader>
           <StaffTableColNames />
           <TableBody>
             {staffs.map((staff, index) => (

@@ -10,17 +10,23 @@ const AddNewStaffButton = () => {
     <Button onClick={() => navigate('/staffs/create')}
       variant='contained'
       sx={{
-        p: 1.5
+        p: 1.5,
+        width: '16rem',
       }}
       startIcon={
         <PeopleOutlineTwoToneIcon style={{
-          fontSize: '30px',
-          padding: 2
+          fontSize: '2rem',
+          padding: 2,
         }}/>
       }>
-      <Typography sx={{
-        textTransform: 'none'
-      }} >Προσθήκη Προσωπικού</Typography>
+      <Typography variant='h4' sx={{
+        textTransform: 'none',
+        '@media (max-width:600px)': {
+          display: 'none'
+        }
+      }}>
+        Προσθήκη Προσωπικού
+      </Typography>
     </Button>
   )
 }
