@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Paper, Button } from '@mui/material';
+import { Paper, Button, Typography } from '@mui/material';
 import SaveAsIcon from '@mui/icons-material/SaveAs';
 
 const FormFooter = () => {
@@ -13,11 +13,16 @@ const FormFooter = () => {
       borderRadius: '2px',
       bgcolor: '#d9d9d96b'
     }}>
-
-      <Button variant='contained' color='success' sx={{ p: 4, m: 1 }}
-        startIcon={<SaveAsIcon/>}
-      >
-        Save
+      <Button
+        type='submit'
+        variant='contained'
+        color='success'
+        fullWidth
+        sx={{ p: 3, m: 1 }}
+        startIcon={
+          <SaveAsIcon style={{ fontSize: '1.7rem' }}/>
+        }>
+        <Typography fontSize='1.5rem' fontWeight='bold' >Save</Typography>
       </Button>
     </Paper>
   )

@@ -11,7 +11,6 @@ import HomePage from './pages/HomePage.jsx';
 
 // Staffs
 import Staffs from './pages/Staffs/Staffs.jsx';
-// import StaffCreate from './pages/Staffs/StaffCreate.jsx';
 import StaffCreateMUi from './pages/Staffs/StaffCreateMUi.jsx';
 
 import './App.css';
