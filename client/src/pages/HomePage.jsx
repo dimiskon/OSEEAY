@@ -1,12 +1,20 @@
-import React from 'react';
-import '../styles/HomePage.css';
+import React from "react";
 
-import Logo from '../assets/25495963368_66bb109f7e_k.jpg'
+import bgImage from "../assets/oseaay.jpg";
+import { Paper } from "@mui/material";
 
 const HomePage = () => {
   return (
-    <div className= 'homePage' style={{ backgroundImage: `url(${Logo})` }}></div>
-  )
-}
+    <Paper
+      style={{
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        width: `100%`,
+        height: `77.6vh`,
+        backgroundImage: `url(${bgImage})`,
+      }}
+    ></Paper>
+  );
+};
 
 export default HomePage;

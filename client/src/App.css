@@ -10,7 +10,13 @@ body {
   align-items: center;
 }
 
-/* .footer {
+/* .navbar {
+  top: 0%;
+  position: relative;
+}
+
+.footer {
   bottom: 0%;
-  position: fixed;
+  position: relative;
+  height: max(10vh, auto);
 } */
