@@ -10,7 +10,7 @@ const staff_metadata = Joi.object().keys({
   mta_payment: Joi.boolean().default(false)
 }).default({});
 
-const requestBody = Joi.array().items({
+const staffs = Joi.array().items({
   asma: Joi.number().integer().default(null),
   display_name: Joi.string().trim().default(null),
   name: Joi.string().trim().default(null),
@@ -25,4 +25,11 @@ const requestBody = Joi.array().items({
   updated_at: Joi.date().timestamp().default('')
 }).required();
 
-module.exports = requestBody;
+const responseBody = Joi.object().keys({
+  totalItems: Joi.number().integer().default(0),
+  page: Joi.number().integer().default(1),
+  offset: Joi.number().integer().default(0),
+  staffs,
+});
+
+module.exports = responseBody;
