@@ -9,7 +9,7 @@ const HomePage = () => {
       style={{
         backgroundSize: "cover",
         backgroundPosition: "center",
-        width: `100%`,
+        width: `100vw`,
         height: `77.6vh`,
         backgroundImage: `url(${bgImage})`,
       }}

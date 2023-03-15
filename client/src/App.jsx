@@ -3,8 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import { CssBaseline, createTheme, ThemeProvider } from "@mui/material";
 
 // Components
-import NavbarMUi from "./components/NavabarMUi";
-import FooterMUi from "./components/FooterMUi.jsx";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer.jsx";
 
 // Pages
 import HomePage from "./pages/HomePage.jsx";
@@ -49,15 +49,14 @@ const App = () => {
   return (
     <div className="App">
       <ThemeProvider theme={defaultTheme}>
-        {/* <Navbar className="navbar" /> */}
-        <NavbarMUi className="navbar" />
+        <Navbar className="navbar" />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           {/* {Staffs} */}
           <Route exact path="/staffs" element={<Staffs />} />
           <Route exact path="/staffs/create" element={<StaffCreateMUi />} />
         </Routes>
-        <FooterMUi theme={defaultTheme} className="footer" />
+        <Footer theme={defaultTheme} className="footer" />
         <CssBaseline />
       </ThemeProvider>
     </div>
