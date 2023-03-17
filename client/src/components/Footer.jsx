@@ -13,7 +13,7 @@ const FooterMUi = (props) => {
         justifyContent: "center",
       }}
     >
-      <Typography variant="h5" color="white">
+      <Typography variant="h4" color="white">
         &copy; 2023 110ΠΜ-ΟΣΕΑΑΥ
       </Typography>
     </Box>

@@ -33,11 +33,12 @@ const StaffCreate = () => {
 
   return (
     <Box component="form" autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
-      <Paper sx={{ width: { md: "80vw" }, m: 4 }} elevation={8}>
+      <Paper sx={{ width: "50vw", m: 4 }} elevation={8}>
         <Tabs
           sx={{
-            bgcolor: "#03074f",
+            bgcolor: "lightgrey",
           }}
+          variant="fullWidth"
           value={tabValue}
           onChange={handleTabChange}
         >
@@ -46,14 +47,11 @@ const StaffCreate = () => {
               sx={{
                 fontSize: "1rem",
                 fontWeight: "bold",
-                color: "rgba(255, 255, 255, 0.7)",
+                color: "grey",
                 textDecoration: "none",
                 textTransform: "none",
                 "&.Mui-selected": {
-                  color: "#fff",
-                },
-                "&.Mui-focusVisible": {
-                  backgroundColor: "rgba(100, 95, 228, 0.32)",
+                  color: "black",
                 },
               }}
               key={tab}
@@ -62,6 +60,17 @@ const StaffCreate = () => {
             />
           ))}
         </Tabs>
+        <Box
+          sx={{
+            // display: "flex",
+            // justifyContent: "center",
+            p: 2,
+          }}
+        >
+          <Typography variant="h2" fontSize="2rem" fontWeight="700">
+            Στοιχεία Προσωπικού
+          </Typography>
+        </Box>
         <TabContext tabValue={tabValue} index={0}>
           <BasicStaffDataGrid
             control={control}

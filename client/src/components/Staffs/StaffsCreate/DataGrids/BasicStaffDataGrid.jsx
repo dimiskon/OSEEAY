@@ -9,7 +9,7 @@ const BasicStaffDataGrid = (props) => {
   const { register, errors, control } = props;
   return (
     <Grid container p={2} spacing={3}>
-      <Grid item xs={6} md={4}>
+      <Grid item xs={12} md={6}>
         <CustomTextField
           dataKey="name"
           type="text"
@@ -19,7 +19,7 @@ const BasicStaffDataGrid = (props) => {
           errors={errors}
         />
       </Grid>
-      <Grid item xs={6} md={4}>
+      <Grid item xs={12} md={6}>
         <CustomTextField
           dataKey="surname"
           type="text"
@@ -29,7 +29,7 @@ const BasicStaffDataGrid = (props) => {
           name="Επώνυμο"
         />
       </Grid>
-      <Grid item xs={6} md={4}>
+      <Grid item xs={12} md={6}>
         <CustomTextField
           dataKey="asma"
           type="number"
@@ -40,7 +40,7 @@ const BasicStaffDataGrid = (props) => {
           name="ΑΣΜΑ"
         />
       </Grid>
-      <Grid item xs={6} md={4}>
+      <Grid item xs={12} md={6}>
         <CustomSelector
           dataKey="unit"
           errors={errors}
@@ -50,7 +50,7 @@ const BasicStaffDataGrid = (props) => {
           items={["ΠΟΛΕΜΙΚΗ ΑΕΡΟΠΟΡΙΑ", "ΣΤΡΑΤΟΣ ΞΗΡΑΣ", "ΠΟΛΕΜΙΚΟ ΝΑΥΤΙΚΟ"]}
         />
       </Grid>
-      <Grid item xs={6} md={4}>
+      <Grid item xs={12} md={6}>
         <CustomTextField
           dataKey="specialization"
           type="text"
@@ -60,7 +60,7 @@ const BasicStaffDataGrid = (props) => {
           name="Ειδικότητα"
         />
       </Grid>
-      <Grid item xs={6} md={4}>
+      <Grid item xs={12} md={6}>
         <CustomTextField
           dataKey="rank"
           type="text"
