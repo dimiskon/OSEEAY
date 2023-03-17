@@ -6,11 +6,12 @@ import { Paper } from "@mui/material";
 const HomePage = () => {
   return (
     <Paper
-      style={{
+      sx={{
         backgroundSize: "cover",
         backgroundPosition: "center",
-        width: `100vw`,
-        height: `77.6vh`,
+        backgroundRepeat: "no-repeat",
+        width: "100%",
+        height: "100vh",
         backgroundImage: `url(${bgImage})`,
       }}
     ></Paper>

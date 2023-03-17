@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import _ from "lodash";
+
 import AddNewStaffButton from "../../components/Staffs/AddNewStaffButton";
 import {
   Box,
@@ -12,6 +14,7 @@ import {
 } from "@mui/material";
 import StaffTableColNames from "../../components/Staffs/StaffTableCols";
 import Staff from "../../components/Staffs/Staff";
+import SearchBar from "../../components/General Purpose/SearchBar";
 
 const StaffsMUi = () => {
   // Staffs Data
@@ -24,8 +27,9 @@ const StaffsMUi = () => {
   const [allItems, setAllItems] = useState(0);
 
   const staffsData = async () => {
+    const searchKey = _.inRange(searchQ.length, 0, 2) ? "" : searchQ;
     const { data } = await axios.get(
-      `/staffs?limit=${rowsPerPage}&page=${page}&asma=${searchQ}`
+      `/staffs?limit=${rowsPerPage}&page=${page}&searchKey=${searchKey}`
     );
     setStaffs(data.staffs);
     setAllItems(data.totalItems);
@@ -51,12 +55,7 @@ const StaffsMUi = () => {
   return (
     <Box sx={{ p: 3, width: "95%" }}>
       <Box sx={{ m: 2, display: "flex", justifyContent: "flex-end" }}>
-        <TextField
-          onChange={handleSearch}
-          label="Αναζήτηση..."
-          variant="filled"
-          sx={{ width: "24rem" }}
-        />
+        <SearchBar handleSearch={handleSearch} />
         <AddNewStaffButton />
       </Box>
       <TableContainer component={Paper} sx={{ minWidth: "700px" }}>

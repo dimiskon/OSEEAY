@@ -5,8 +5,8 @@ const FooterMUi = (props) => {
   const { theme } = props;
   return (
     <Box
-      width="100%"
       sx={{
+        width: "100%",
         p: 3,
         bgcolor: theme.palette.primary.main,
         display: "flex",

@@ -11,14 +11,13 @@ const AddNewStaffButton = () => {
       onClick={() => navigate("/staffs/create")}
       variant="contained"
       title="Προσθήκη Προσωπικού"
-      startIcon={
-        <PeopleOutlineTwoToneIcon
-          style={{
-            fontSize: "2rem",
-          }}
-        />
-      }
-    ></Button>
+    >
+      <PeopleOutlineTwoToneIcon
+        style={{
+          fontSize: "2rem",
+        }}
+      />
+    </Button>
   );
 };
 
