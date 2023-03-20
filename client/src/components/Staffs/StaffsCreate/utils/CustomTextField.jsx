@@ -6,7 +6,6 @@ import { InputLabel, TextField, Typography } from "@mui/material";
 const CustomTextField = (props) => {
   const { dataKey, name, isRequired, register, errors, type } = props;
 
-  // console.log({ errors });
   return (
     <>
       <InputLabel>

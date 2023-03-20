@@ -33,7 +33,6 @@ const BasicStaffDataGrid = (props) => {
         <CustomTextField
           dataKey="asma"
           type="number"
-          step="1"
           register={register}
           isRequired={true}
           errors={errors}
@@ -46,6 +45,7 @@ const BasicStaffDataGrid = (props) => {
           errors={errors}
           name="Σώμα"
           control={control}
+          isRequired={true}
           register={register}
           items={["ΠΟΛΕΜΙΚΗ ΑΕΡΟΠΟΡΙΑ", "ΣΤΡΑΤΟΣ ΞΗΡΑΣ", "ΠΟΛΕΜΙΚΟ ΝΑΥΤΙΚΟ"]}
         />

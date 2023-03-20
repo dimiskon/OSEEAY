@@ -11,24 +11,25 @@ import {
 import { useController } from "react-hook-form";
 
 const CustomSelector = (props) => {
-  const { dataKey, items, name, register, control } = props;
+  const { dataKey, items, name, register, control, isRequired = false } = props;
   const { field } = useController({
-    name: "unit",
+    name: dataKey,
     control,
   });
 
   const handleOnChange = (option) => {
     field.onChange(option.value);
   };
+
   return (
     <>
       <InputLabel>
         <Typography variant="inputLabel">{name}</Typography>
       </InputLabel>
       <FormControl variant="filled" fullWidth>
-        <InputLabel required>{name}</InputLabel>
+        <InputLabel required={isRequired}>{name}</InputLabel>
         <Select
-          {...register(`${dataKey}`, { required: true })}
+          {...register(`${dataKey}`, { required: isRequired })}
           variant="filled"
           onChange={handleOnChange}
           defaultValue=""

@@ -13,7 +13,9 @@ const SearchBar = (props) => {
       placeholder="Αναζήτηση..."
       variant="filled"
       autoFocus={true}
-      sx={{ width: "24rem" }}
+      sx={{
+        width: "24rem",
+      }}
       InputProps={{
         endAdornment: (
           <InputAdornment position="end">

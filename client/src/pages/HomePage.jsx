@@ -1,11 +1,11 @@
 import React from "react";
 
 import bgImage from "../assets/oseaay.jpg";
-import { Paper } from "@mui/material";
+import { Box } from "@mui/material";
 
 const HomePage = () => {
   return (
-    <Paper
+    <Box
       sx={{
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -14,7 +14,7 @@ const HomePage = () => {
         height: "100vh",
         backgroundImage: `url(${bgImage})`,
       }}
-    ></Paper>
+    ></Box>
   );
 };
 

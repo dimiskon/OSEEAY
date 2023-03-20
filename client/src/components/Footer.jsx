@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 
-const FooterMUi = (props) => {
-  const { theme } = props;
+const FooterMUi = () => {
+  const theme = useTheme();
   return (
     <Box
       sx={{

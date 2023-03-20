@@ -54,7 +54,14 @@ const StaffsMUi = () => {
 
   return (
     <Box sx={{ p: 3, width: "95%" }}>
-      <Box sx={{ m: 2, display: "flex", justifyContent: "flex-end" }}>
+      <Box
+        sx={{
+          my: 2,
+          gap: 0.5,
+          display: "flex",
+          justifyContent: "end",
+        }}
+      >
         <SearchBar handleSearch={handleSearch} />
         <AddNewStaffButton />
       </Box>

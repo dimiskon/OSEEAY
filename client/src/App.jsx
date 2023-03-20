@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { CssBaseline, createTheme, ThemeProvider, Box } from "@mui/material";
+import theme from "./theme";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -16,36 +17,7 @@ import StaffCreate from "./pages/Staffs/StaffCreate.jsx";
 import "./App.css";
 
 const App = () => {
-  const defaultTheme = createTheme({
-    palette: {
-      primary: {
-        main: "#03074f",
-      },
-      secondary: {
-        main: "#fff",
-      },
-    },
-    typography: {
-      h2: {
-        fontSize: "1.5rem",
-      },
-      inputLabel: {
-        fontSize: "1rem",
-        color: "#03074f",
-        fontWeight: "bold",
-      },
-      h4: {
-        color: "white",
-        fontSize: "1rem",
-        "@media (max-width:600px)": {
-          fontSize: "0.8rem",
-        },
-      },
-      navbar: {
-        fontSize: "5rem",
-      },
-    },
-  });
+  const defaultTheme = createTheme(theme);
   return (
     <Box className="App">
       <ThemeProvider theme={defaultTheme}>
@@ -56,7 +28,7 @@ const App = () => {
           <Route exact path="/staffs" element={<Staffs />} />
           <Route exact path="/staffs/create" element={<StaffCreate />} />
         </Routes>
-        <Footer theme={defaultTheme} />
+        <Footer />
         <CssBaseline />
       </ThemeProvider>
     </Box>

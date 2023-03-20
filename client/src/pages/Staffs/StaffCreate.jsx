@@ -1,18 +1,15 @@
 import React, { useState } from "react";
-import { Box, Paper, Typography, Tabs, Tab } from "@mui/material";
+import { Box, Paper, Typography, useTheme } from "@mui/material";
 import { useForm } from "react-hook-form";
 
 import BasicStaffDataGrid from "../../components/Staffs/StaffsCreate/DataGrids/BasicStaffDataGrid";
 import FormFooter from "../../components/Staffs/StaffsCreate/FormFooter";
-import TabContext from "../../components/Staffs/StaffsCreate/Tabs/TabContext";
+import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
-const tabHeaders = [
-  "Βασικά Στοιχεία",
-  "Λοιπά Στοιχεία",
-  "Οικογενειακά Στοιχεία",
-];
+import StaffMetaDataGrid from "../../components/Staffs/StaffsCreate/DataGrids/StaffMetaDataGrid";
 
 const StaffCreate = () => {
+  const theme = useTheme();
   const {
     register,
     handleSubmit,
@@ -32,82 +29,46 @@ const StaffCreate = () => {
   };
 
   return (
-    <Box component="form" autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
-      <Paper sx={{ width: "50vw", m: 4 }} elevation={8}>
-        <Tabs
-          sx={{
-            bgcolor: "lightgrey",
-          }}
-          variant="fullWidth"
-          value={tabValue}
-          onChange={handleTabChange}
-        >
-          {tabHeaders.map((tab, index) => (
-            <Tab
-              sx={{
-                fontSize: "1rem",
-                fontWeight: "bold",
-                color: "grey",
-                textDecoration: "none",
-                textTransform: "none",
-                "&.Mui-selected": {
-                  color: "black",
-                },
-              }}
-              key={tab}
-              label={tab}
-              value={index}
+    <Box
+      display="flex"
+      justifyContent="center"
+      component="form"
+      autoComplete="off"
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      {/* <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
+        <Typography variant="h2" fontWeight="700">
+          Στοιχεία Προσωπικού
+        </Typography>
+      </Box> */}
+      <Paper sx={{ m: 6, width: "75%" }} elevation={10}>
+        {/* <StaffTabs handleTabChange={handleTabChange} tabValue={tabValue} /> */}
+        {/* <TabContext tabValue={tabValue} index={0}> */}
+        <Grid2 container spacing={4}>
+          <Grid2 item xs={12} md={8}>
+            <Typography p={2} variant="h2" fontWeight="700">
+              Στοιχεία Προσωπικού
+            </Typography>
+            <BasicStaffDataGrid
+              control={control}
+              errors={errors}
+              register={register}
             />
-          ))}
-        </Tabs>
-        <Box
-          sx={{
-            // display: "flex",
-            // justifyContent: "center",
-            p: 2,
-          }}
-        >
-          <Typography variant="h2" fontSize="2rem" fontWeight="700">
-            Στοιχεία Προσωπικού
-          </Typography>
-        </Box>
-        <TabContext tabValue={tabValue} index={0}>
-          <BasicStaffDataGrid
-            control={control}
-            errors={errors}
-            register={register}
-          />
-        </TabContext>
+          </Grid2>
+          <Grid2 item xs={8} md={4}>
+            <Typography p={2} variant="h2" fontWeight="700">
+              Υπηρεσιακά Στοιχεία
+            </Typography>
+            <StaffMetaDataGrid
+              control={control}
+              errors={errors}
+              register={register}
+            />
+          </Grid2>
+        </Grid2>
+        {/* </TabContext> */}
         <FormFooter />
       </Paper>
-      {/* <Paper
-        sx={{
-          m: 4,
-          width: "60rem",
-          minWidth: "20rem",
-        }}
-        elevation={6}
-      >
-        <Box>
-          <Typography
-            variant="h2"
-            fontWeight="bold"
-            sx={{
-              color: "#03074f",
-              fontSize: "2rem",
-              p: "20px 0px 10px 15px",
-            }}
-          >
-            Στοιχεία Προσωπικού
-          </Typography>
-        </Box>
-        <BasicStaffDataGrid
-          control={control}
-          errors={errors}
-          register={register}
-        />
-        <FormFooter />
-      </Paper> */}
     </Box>
   );
 };
