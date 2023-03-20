@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Paper, Typography, useTheme } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import { useForm } from "react-hook-form";
 
 import BasicStaffDataGrid from "../../components/Staffs/StaffsCreate/DataGrids/BasicStaffDataGrid";
@@ -8,14 +8,20 @@ import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
 import StaffMetaDataGrid from "../../components/Staffs/StaffsCreate/DataGrids/StaffMetaDataGrid";
 
+import schema from "../../validations/StaffCreate";
+import { joiResolver } from "@hookform/resolvers/joi";
+
 const StaffCreate = () => {
-  const theme = useTheme();
+  // const theme = useTheme();
+
   const {
     register,
     handleSubmit,
     control,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    resolver: joiResolver(schema),
+  });
 
   const onSubmit = (data) => {
     // eslint-disable-next-line no-console
@@ -34,6 +40,7 @@ const StaffCreate = () => {
       justifyContent="center"
       component="form"
       autoComplete="off"
+      noValidate
       onSubmit={handleSubmit(onSubmit)}
     >
       {/* <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
@@ -44,8 +51,8 @@ const StaffCreate = () => {
       <Paper sx={{ m: 6, width: "75%" }} elevation={10}>
         {/* <StaffTabs handleTabChange={handleTabChange} tabValue={tabValue} /> */}
         {/* <TabContext tabValue={tabValue} index={0}> */}
-        <Grid2 container spacing={4}>
-          <Grid2 item xs={12} md={8}>
+        <Grid2 container spacing={4} columns={16}>
+          <Grid2 item xs={16} md={10}>
             <Typography p={2} variant="h2" fontWeight="700">
               Στοιχεία Προσωπικού
             </Typography>
@@ -55,7 +62,7 @@ const StaffCreate = () => {
               register={register}
             />
           </Grid2>
-          <Grid2 item xs={8} md={4}>
+          <Grid2 item xs={16} md={6}>
             <Typography p={2} variant="h2" fontWeight="700">
               Υπηρεσιακά Στοιχεία
             </Typography>

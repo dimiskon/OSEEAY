@@ -23,9 +23,11 @@ const CustomSelector = (props) => {
 
   return (
     <>
-      <InputLabel>
-        <Typography variant="inputLabel">{name}</Typography>
-      </InputLabel>
+      {isRequired && (
+        <InputLabel>
+          <Typography variant="inputLabel">{name}</Typography>
+        </InputLabel>
+      )}
       <FormControl variant="filled" fullWidth>
         <InputLabel required={isRequired}>{name}</InputLabel>
         <Select
