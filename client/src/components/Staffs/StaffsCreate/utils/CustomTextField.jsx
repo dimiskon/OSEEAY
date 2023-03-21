@@ -5,7 +5,6 @@ import { InputLabel, TextField, Typography } from "@mui/material";
 
 const CustomTextField = (props) => {
   const { dataKey, name, isRequired, register, errors, type } = props;
-
   return (
     <>
       <InputLabel>
@@ -26,8 +25,11 @@ const CustomTextField = (props) => {
         placeholder={name + "..."}
         label={name}
         fullWidth
+        error={errors[dataKey]?.message ? true : false}
       />
-      <ErrorMessage errors={errors} name={name} as="span" />
+      <Typography variant="p" color="error">
+        {errors[dataKey]?.message}
+      </Typography>
     </>
   );
 };

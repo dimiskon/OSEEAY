@@ -8,8 +8,8 @@ import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
 import StaffMetaDataGrid from "../../components/Staffs/StaffsCreate/DataGrids/StaffMetaDataGrid";
 
-import schema from "../../validations/StaffCreate";
-import { joiResolver } from "@hookform/resolvers/joi";
+import schema from "../../validations/StaffCreateSchema";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 const StaffCreate = () => {
   // const theme = useTheme();
@@ -20,7 +20,7 @@ const StaffCreate = () => {
     control,
     formState: { errors },
   } = useForm({
-    resolver: joiResolver(schema),
+    resolver: yupResolver(schema),
   });
 
   const onSubmit = (data) => {
